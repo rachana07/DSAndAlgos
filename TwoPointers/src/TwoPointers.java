@@ -17,7 +17,7 @@ import java.util.*;
 //9
 //30
 //1
-public class Main {
+public class TwoPointers {
 
     //Two pointers: move in same direction or move in opposite direction
     // we can avoid two for loops(time complexity: O(n^2) with two pointers and solve the problems in O(n)

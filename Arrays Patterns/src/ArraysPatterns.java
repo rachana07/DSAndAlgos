@@ -11,7 +11,7 @@ import java.util.*;
 //[48, 24, 12, 8]
 //4
 //true
-public class Main {
+public class ArraysPatterns {
     public static void main(String[] args) {
         boolean res1 = hasDuplicate(new int[]{1, 2, 3, 3});
         System.out.println(res1);

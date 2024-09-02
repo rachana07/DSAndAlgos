@@ -12,7 +12,7 @@ import java.util.*;
 //true
 //[2, 2, 4, 4, 6]
 //baec
-public class Main {
+public class SlidingWindow {
 
     //Sliding Window
     // Time Complexity: O(n)
