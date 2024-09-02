@@ -1,5 +1,22 @@
 import java.util.*;
 
+//Expected Output
+//3
+//2
+//[1, 2, 7, 0, 0, 0]
+//[1, 6]
+//true
+//[1, 2]
+//1
+//true
+//leotcede
+//4
+//[[-1, -1, 2], [-1, 0, 1]]
+//3
+//36
+//9
+//30
+//1
 public class Main {
 
     //Two pointers: move in same direction or move in opposite direction
@@ -74,6 +91,8 @@ public class Main {
     }
 
     // two pointers in same direction (fast and slow pointers)
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int removeDuplicates(List<Integer> arr) {
         //Given a sorted list of numbers, remove duplicates and return the new length. You must do this in-place and without using extra memory.
         //Input: [0, 0, 1, 1, 1, 2, 2].
@@ -89,6 +108,8 @@ public class Main {
         return slow+1;
     }
 
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int middleOfLinkedList(Node<Integer> head) {
         //Find the middle node of a linked list.
         //
@@ -111,7 +132,9 @@ public class Main {
        return slow.data;
     }
 
-    public static List<Integer> moveZeros(List<Integer> nums) {
+    //time complexity: O(n)
+    //space complexity: O(1)
+    public static List<Integer>moveZeros(List<Integer> nums) {
         //Given an array of integers, move all the 0s to the back of the array while maintaining the relative order of the non-zero elements. Do this in-place using constant auxiliary space.
         //
         //Input:
@@ -134,6 +157,8 @@ public class Main {
     }
 
     // opposite direction: two sum
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static List<Integer> twoSumSorted(List<Integer> arr, int target) {
         //Given an array of integers sorted in ascending order, find two numbers that add up to a given target. Return the indices of the two numbers in ascending order. You can assume elements in the array are unique and there is only one solution. Do this in O(n) time and with constant auxiliary space.
         //
@@ -162,6 +187,8 @@ public class Main {
     }
 
     //palindromic string
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static boolean isPalindrome(String s) {
         //Determine whether a string is a palindrome, ignoring non-alphanumeric characters and case. Examples:
         //
@@ -186,6 +213,8 @@ public class Main {
     }
 
     // Prefix sum
+    //time complexity: O(n)
+    //space complexity: O(n)
     public static List<Integer> subarraySum(List<Integer> arr, int target) {
         //Given an array of integers and an integer target, find a subarray that sums to target and return the start and end indices of the subarray.
         //
@@ -210,6 +239,8 @@ public class Main {
 
     //Find the total number of subarrays that sums up to target.
     //input:[1,1,1]  output:2 ([1,1],[1,1])
+    //time complexity: O(n)
+    //space complexity: O(n)
     public static int subarraySumTotal(List<Integer> arr, int target) {
        int sum=0;
        int count=0;
@@ -229,6 +260,8 @@ public class Main {
 
     //Given a linked list with potentially a loop, determine whether the linked list from the first node contains a cycle in it. For bonus points, do this with constant space.
     //LinkedList Cycle
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static boolean hasCycle(Node<Integer> nodes) {
         Node<Integer> fast = nodes;
         Node<Integer> slow = nodes;
@@ -254,6 +287,8 @@ public class Main {
     //
     //Input: s = "leetcode"
     //Output: "leotcede"
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static String reverseVowels(String s) {
 
         char[] chars = s.toCharArray();
@@ -289,6 +324,8 @@ public class Main {
    //Input: people = [1,2], limit = 3
    //Output: 1
    //Explanation: 1 boat (1, 2)
+   //time complexity: O(n)
+   //space complexity: O(1)
     public static int numberOfBoats(List<Integer> people, int limit) {
         Collections.sort(people);
         int left=0;
@@ -318,6 +355,8 @@ public class Main {
     //nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
     //The distinct triplets are [-1,0,1] and [-1,-1,2].
     //Notice that the order of the output and the order of the triplets does not matter.
+    //time complexity: O(n^2)
+    //space complexity: O(n)
     public static List<List<Integer>> threeSumZero(List<Integer> nums){
         Collections.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
@@ -364,6 +403,8 @@ public class Main {
     //Input: s = "eceba"
     //Output: 3
     //Explanation: The substring is "ece" which its length is 3.
+    //time complexity: O(n)
+    //space complexity: O(k) where k is no of distinct chars atmost 2
     public static int longestSubstringWithAtmostTwoDistinctCharacters(String s){
         int left=0;
         HashMap<Character,Integer> map = new HashMap<>();
@@ -402,6 +443,8 @@ public class Main {
     //
     //Output: 36
     //max container problem
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int maxArea(int[] heights) {
         int left=0;
         int right=heights.length-1;
@@ -434,7 +477,8 @@ public class Main {
     //Input: height = [0,2,0,3,1,0,1,3,2,1]
     //
     //Output: 9
-
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int trap(int[] height) {
         int l=0;
         int r=height.length-1;
@@ -471,6 +515,8 @@ public class Main {
     //Input: arr1 = [2, 4, 5, 8, 10], arr2 = [4, 6, 8, 9]
     //
     //Output: 30
+    //time complexity: O(n1+n2)
+    //space complexity: O(1)
     public static int maxScore(List<Integer> arr1, List<Integer> arr2) {
         int n1 = arr1.size();
         int n2 = arr2.size();
@@ -511,6 +557,8 @@ public class Main {
     }
 
 
+    //time complexity: O(n)
+    //space complexity: O(n)
     public static int minSwaps(int[] nums) {
         //A swap is defined as taking two distinct positions in an array and swapping the values in them.
         //

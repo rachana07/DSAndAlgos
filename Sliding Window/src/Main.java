@@ -1,5 +1,17 @@
 import java.util.*;
-
+//Expected Output
+//14
+//[0, 1, 2]
+//4
+//2
+//3
+//4
+//6
+//4
+//YXAZ
+//true
+//[2, 2, 4, 4, 6]
+//baec
 public class Main {
 
     //Sliding Window
@@ -73,6 +85,8 @@ public class Main {
     }
 
     // sliding window problem of fixed size
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int subarraySumFixed(List<Integer> nums, int k) {
         // Given an array (list) nums consisted of only non-negative integers, find the largest sum among all subarrays of length k in nums.
         //For example, if the input is nums = [1, 2, 3, 7, 4, 1], k = 3, then the output would be 14 as the largest length 3 subarray sum is given by [3, 7, 4] which sums to 14.
@@ -92,6 +106,8 @@ public class Main {
     }
 
     //sliding problem of fixed size k
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static List<Integer> findAllAnagrams(String original, String check) {
         //Given a string original and a string check, find the starting index of all substrings of original that is an anagram of check. The output must be sorted in ascending order.
         //Input: original = "cbaebabacd", check = "abc"
@@ -124,6 +140,8 @@ public class Main {
 
     // sliding window of flexible size - longest
     // 1, 2, 3, 7, 4, 1
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int subarraySumLongest(List<Integer> nums, int target) {
         // nums = [1, 6, 3, 1, 2, 4, 5] and target = 10, output: 4(length of [3,1,2,4])
         int sum =0;
@@ -142,6 +160,8 @@ public class Main {
     }
 
     // sliding window with flexible length - longest
+    // time complexity: O(n)
+    //space complexity: O(min(n,m))
     public static int longestSubstringWithoutRepeatingCharacters(String s) {
        // Find the length of the longest substring of a given string without repeating characters.
         //Input: abccabcabcc
@@ -161,6 +181,8 @@ public class Main {
     }
 
     // sliding window with flexible length - smallest
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int subarraySumShortest(List<Integer> nums, int target) {
     //Recall the same example with input nums = [1, 4, 1, 7, 3, 0, 2, 5] and target = 10, then the smallest window with the sum >= 10 is [7, 3] with length 2. So the output is 2.
         int left = 0;
@@ -179,6 +201,8 @@ public class Main {
     }
 
     // sliding window with flexible length - smallest
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int leastConsecutiveCardsToMatch(List<Integer> cards) {
         //Given a list of integers cards, your goal is to match a pair of cards, but you can only pick up cards in a consecutive manner. What's the minimum number of cards that you need to pick up to make a pair? If there are no matching pairs, return -1.
         //
@@ -202,6 +226,8 @@ public class Main {
     }
 
     //Buy and Sell Crypto
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int maxProfit(int[] prices) {
         //You are given an integer array prices where prices[i] is the price of NeetCoin on the ith day.
         //You may choose a single day to buy one NeetCoin and choose a different day in the future to sell it.
@@ -222,6 +248,8 @@ public class Main {
     }
 
     //Long repeating substring with replacement (equal to condition)
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static int characterReplacement(String s, int k) {
         //You are given a string s consisting of only uppercase english characters and an integer k. You can choose up to k characters of the string and replace them with any other uppercase English character.
         //Input: s = "XYYX", k = 2
@@ -242,6 +270,8 @@ public class Main {
         return res;
     }
 
+    //time complexity: O(n)
+    //space complexity: O(m), where m is length of t
     public static String minWindow(String s, String t) {
         //Given two strings s and t, return the shortest substring of s such that every character in t, including duplicates, is present in the substring. If such a substring does not exist, return an empty string "".
         //Input: s = "OUZODYXAZV", t = "XYZ"
@@ -280,6 +310,8 @@ public class Main {
     }
 
     //Permutation String
+    //time complexity: O(n)
+    //space complexity: O(1)
     public static boolean checkInclusion(String s1, String s2) {
        //You are given two strings s1 and s2
         //Return true if s2 contains a permutation of s1, or false otherwise. That means if a permutation of s1 exists as a substring of s2, then return true.
@@ -307,6 +339,8 @@ public class Main {
         return false;
     }
 
+    //time complexity: O(n)
+    //space complexity: O(m) where m is the length of check
     public static String getMinimumWindow(String original, String check) {
         // Given two strings, original and check, return the minimum substring of original such that each character in check, including duplicates, are included in this substring. By "minimum", I mean the shortest substring. If two substrings that satisfy the condition have the same length, the one that comes lexicographically first is smaller.
         //Input: original = "cdbaebaecd", check = "abc"
@@ -350,6 +384,8 @@ public class Main {
     }
 
     //Toughest
+    //time complexity: O(n)
+    //space complexity: O(k), due to deque
     public static int[] maxSlidingWindow(int[] nums, int k) {
         //You are given an array of integers nums and an integer k. There is a sliding window of size k that starts at the left edge of the array. The window slides one position to the right until it reaches the right edge of the array.
         //
